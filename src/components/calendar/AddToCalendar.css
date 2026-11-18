@@ -1,0 +1,53 @@
+.add-to-calendar {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.add-to-calendar__label {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--emerald);
+}
+
+.add-to-calendar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.add-to-calendar__btn {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.add-to-calendar__btn--google {
+  background: var(--emerald);
+  color: var(--ivory);
+  border: 1px solid var(--emerald);
+}
+
+.add-to-calendar__btn--google:hover,
+.add-to-calendar__btn--google:focus-visible {
+  background: var(--emerald-deep);
+  outline: none;
+}
+
+.add-to-calendar__btn--ics {
+  background: transparent;
+  color: var(--emerald);
+  border: 1px solid rgba(6, 51, 39, 0.35);
+}
+
+.add-to-calendar__btn--ics:hover,
+.add-to-calendar__btn--ics:focus-visible {
+  border-color: var(--emerald);
+  background: rgba(6, 51, 39, 0.05);
+  outline: none;
+}

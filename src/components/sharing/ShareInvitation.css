@@ -1,0 +1,42 @@
+.share-invitation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.share-invitation__primary,
+.share-invitation__copy {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.share-invitation__primary {
+  border: none;
+  background: var(--gold);
+  color: var(--emerald-deep);
+}
+
+.share-invitation__primary:hover,
+.share-invitation__primary:focus-visible {
+  background: #d4b56e;
+  outline: none;
+}
+
+.share-invitation__copy {
+  border: 1px solid rgba(197, 160, 89, 0.55);
+  background: transparent;
+  color: var(--gold);
+}
+
+.share-invitation__copy:hover,
+.share-invitation__copy:focus-visible {
+  border-color: var(--gold);
+  background: rgba(197, 160, 89, 0.08);
+  outline: none;
+}

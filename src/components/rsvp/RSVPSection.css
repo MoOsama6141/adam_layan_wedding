@@ -1,0 +1,50 @@
+.rsvp-section {
+  background: var(--emerald);
+  color: var(--ivory);
+  text-align: center;
+}
+
+.rsvp-section__inner {
+  max-width: 36rem;
+}
+
+.rsvp-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.rsvp-section__btn {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.85rem 1.45rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.rsvp-section__btn--primary {
+  border: none;
+  background: var(--gold);
+  color: var(--emerald-deep);
+}
+
+.rsvp-section__btn--primary:hover,
+.rsvp-section__btn--primary:focus-visible {
+  background: #d4b56e;
+  outline: none;
+}
+
+.rsvp-section__btn--outline {
+  border: 1px solid rgba(197, 160, 89, 0.65);
+  background: transparent;
+  color: var(--gold);
+}
+
+.rsvp-section__btn--outline:hover,
+.rsvp-section__btn--outline:focus-visible {
+  background: rgba(197, 160, 89, 0.1);
+  outline: none;
+}

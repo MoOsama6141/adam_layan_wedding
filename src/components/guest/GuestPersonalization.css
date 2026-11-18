@@ -1,0 +1,45 @@
+.guest-greeting {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  letter-spacing: 0.04em;
+  color: rgba(247, 243, 235, 0.88);
+  text-align: center;
+}
+
+.guest-greeting--personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  animation: guest-fade 1.1s ease both;
+}
+
+.guest-greeting__line {
+  font-size: 0.92em;
+  opacity: 0.85;
+}
+
+.guest-greeting__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 4vw, 1.9rem);
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+@keyframes guest-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guest-greeting--personal {
+    animation: none;
+  }
+}

@@ -1,0 +1,33 @@
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.custom-cursor__dot,
+.custom-cursor__trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.custom-cursor__dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.45);
+}
+
+.custom-cursor__trail {
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  opacity: 0.55;
+}
+
+/* Additive golden trail only — native cursor stays for usability */

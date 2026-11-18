@@ -1,0 +1,37 @@
+.countdown {
+  background:
+    radial-gradient(ellipse at center, rgba(197, 160, 89, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--emerald) 0%, #04261e 100%);
+  color: var(--ivory);
+  text-align: center;
+}
+
+.countdown__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.countdown__value {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 7vw, 3.2rem);
+  line-height: 1;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.countdown__label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(247, 243, 235, 0.75);
+}
