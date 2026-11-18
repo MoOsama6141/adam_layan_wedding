@@ -30,7 +30,12 @@
   outline: none;
 }
 
-@media (max-width: 640px) {`n  .back-to-top {`n    bottom: 1.25rem;`n    right: 1rem;`n  }`n}
+@media (max-width: 640px) {
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1rem;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .back-to-top {
