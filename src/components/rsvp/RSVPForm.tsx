@@ -156,11 +156,11 @@ export function RSVPForm({ initialAttendance, defaultName, onClose }: RSVPFormPr
       )}
 
       <div className="rsvp-form__actions">
-        <button type="submit" className="rsvp-form__submit" disabled={loading}>
+        {/* <button type="submit" className="rsvp-form__submit" disabled={loading}>
           {loading ? 'جاري الإرسال...' : 'إرسال الرد'}
-        </button>
-        <button type="button" className="rsvp-form__whatsapp" onClick={openWhatsApp}>
-          إرسال عبر واتساب
+        </button> */}
+        <button type="button" className="rsvp-form__whatsapp" disabled={loading} onClick={openWhatsApp}>
+          {loading ? 'جاري الإرسال...' : 'إرسال عبر واتساب'}
         </button>
         <button type="button" className="rsvp-form__cancel" onClick={onClose}>
           إغلاق

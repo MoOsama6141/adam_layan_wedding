@@ -65,7 +65,7 @@ export const weddingData = {
   rsvp: {
     /** Set to a real endpoint when backend is ready */
     apiUrl: null as string | null,
-    whatsappNumber: '966500000000',
+    whatsappNumber: '+966549778051',
     maxGuests: 6,
   },
 
@@ -108,6 +108,7 @@ export const weddingData = {
     hero: '/images/hero.jpg',
     intro: '/images/intro.jpg',
     event: '/images/event.jpg',
+    footerBackground: '/images/hero.jpg',
   },
 } as const;
 

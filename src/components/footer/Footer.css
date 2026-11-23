@@ -1,8 +1,31 @@
 .site-footer {
-  background: #021510;
+  position: relative;
+  background-color: #112823;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: var(--ivory);
   text-align: center;
-  padding: 3.5rem 1.25rem 4.5rem;
+  padding: 4.5rem 1.25rem 4.5rem;
+  overflow: hidden;
+}
+
+.site-footer__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    #112823 0%,
+    rgba(17, 40, 35, 0.7) 50%,
+    #112823 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-footer__content {
+  position: relative;
+  z-index: 1;
 }
 
 .site-footer__ornament {
