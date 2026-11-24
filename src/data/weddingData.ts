@@ -109,6 +109,7 @@ export const weddingData = {
     intro: '/images/intro.jpg',
     event: '/images/event.jpg',
     footerBackground: '/images/hero.jpg',
+    introVideo: '/images/wedding.mp4',
   },
 } as const;
 

@@ -3,45 +3,163 @@
   color: var(--emerald-deep);
 }
 
-.intro__grid {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-}
+/* —— Mobile: editorial letter over atmosphere —— */
+@media (max-width: 859px) {
+  .intro.section {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: min(92svh, 52rem);
+    display: flex;
+    align-items: flex-end;
+  }
 
-@media (min-width: 860px) {
+  .intro .section__inner {
+    width: 100%;
+    margin: 0;
+  }
+
   .intro__grid {
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 3.5rem;
+    position: relative;
+    display: block;
+    min-height: min(92svh, 52rem);
+  }
+
+  .intro__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .intro__media img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 35%;
+    animation: intro-kenburns 18s ease-in-out infinite alternate;
+  }
+
+  .intro__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(247, 243, 235, 0.2) 0%,
+        rgba(247, 243, 235, 0.08) 28%,
+        rgba(4, 38, 30, 0.15) 48%,
+        rgba(4, 38, 30, 0.72) 72%,
+        rgba(4, 38, 30, 0.92) 100%
+      );
+    pointer-events: none;
+  }
+
+  .intro__copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.95rem;
+    padding: 5.5rem 1.4rem 3.25rem;
+    margin-top: auto;
+    min-height: min(92svh, 52rem);
+    justify-content: flex-end;
+  }
+
+  .intro__ornament {
+    width: 2.75rem;
+    height: 1px;
+    margin-bottom: 0.35rem;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.9;
+  }
+
+  .intro__title {
+    color: var(--ivory) !important;
+    font-size: clamp(1.85rem, 7.2vw, 2.45rem);
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    max-width: 16ch;
+  }
+
+  .intro__body {
+    color: rgba(247, 243, 235, 0.88);
+    font-size: 0.98rem;
+    line-height: 1.95;
+    max-width: 28rem;
+    text-wrap: pretty;
+  }
+
+  .intro__signature {
+    margin-top: 0.35rem;
+    font-size: clamp(1.55rem, 5.5vw, 1.95rem);
+    color: var(--gold);
+    letter-spacing: 0.02em;
   }
 }
 
-.intro__media img {
-  display: block;
-  width: 100%;
-  max-height: 34rem;
-  object-fit: cover;
-  aspect-ratio: 3 / 4;
+/* —— Desktop: keep the existing split layout —— */
+@media (min-width: 860px) {
+  .intro__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .intro__ornament {
+    width: 3rem;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    opacity: 0.85;
+  }
+
+  .intro__media img {
+    display: block;
+    width: 100%;
+    max-height: 34rem;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+  }
+
+  .intro__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+
+  .intro__body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(6, 51, 39, 0.82);
+    max-width: 34rem;
+  }
+
+  .intro__signature {
+    margin: 0.5rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--gold-deep);
+  }
 }
 
-.intro__copy {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+@keyframes intro-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
 }
 
-.intro__body {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: rgba(6, 51, 39, 0.82);
-  max-width: 34rem;
-}
-
-.intro__signature {
-  margin: 0.5rem 0 0;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--gold-deep);
+@media (prefers-reduced-motion: reduce) {
+  .intro__media img {
+    animation: none;
+  }
 }
