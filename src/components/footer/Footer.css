@@ -1,5 +1,7 @@
 .site-footer {
   position: relative;
+  z-index: 1;
+  isolation: isolate;
   background-color: #112823;
   background-repeat: no-repeat;
   background-position: center center;
@@ -15,9 +17,9 @@
   inset: 0;
   background: linear-gradient(
     0deg,
-    #112823 0%,
-    rgba(17, 40, 35, 0.7) 50%,
-    #112823 100%
+    rgba(17, 40, 35, 0.92) 0%,
+    rgba(17, 40, 35, 0.55) 50%,
+    rgba(17, 40, 35, 0.9) 100%
   );
   pointer-events: none;
   z-index: 0;
@@ -25,7 +27,7 @@
 
 .site-footer__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .site-footer__ornament {

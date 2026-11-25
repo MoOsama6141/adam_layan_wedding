@@ -1,5 +1,7 @@
 .our-story {
-  background: var(--emerald);
+  position: relative;
+  z-index: 1;
+  background: transparent;
   color: var(--ivory);
 }
 

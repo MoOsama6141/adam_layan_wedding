@@ -1,5 +1,7 @@
 .hero {
   position: relative;
+  z-index: 1;
+  isolation: isolate;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -13,13 +15,14 @@
 .hero__veil {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
     linear-gradient(180deg, rgba(3, 18, 14, 0.35) 0%, rgba(3, 18, 14, 0.55) 45%, rgba(3, 18, 14, 0.78) 100%);
 }
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;

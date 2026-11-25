@@ -1,7 +1,11 @@
 .countdown {
-  background:
-    radial-gradient(ellipse at center, rgba(197, 160, 89, 0.08), transparent 60%),
-    linear-gradient(180deg, var(--emerald) 0%, #04261e 100%);
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(197, 160, 89, 0.08),
+    transparent 60%
+  );
   color: var(--ivory);
   text-align: center;
 }

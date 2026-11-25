@@ -11,6 +11,7 @@ import { BackToTop } from './components/ui/BackToTop';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { Loader } from './components/ui/Loader';
 import { SectionNav } from './components/ui/SectionNav';
+import { StarBackground } from './components/ui/StarBackground';
 import { useGuestName } from './hooks/useGuestName';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <>
       {!loaded && <Loader onDone={onLoaderDone} />}
+      <StarBackground />
       <div className={`app ${loaded ? 'is-ready' : ''}`}>
         <SectionNav />
         <Hero guestName={guestName} />

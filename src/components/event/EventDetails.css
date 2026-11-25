@@ -1,4 +1,7 @@
 .event-details {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
   background: var(--ivory);
   color: var(--emerald-deep);
 }

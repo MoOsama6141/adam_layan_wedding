@@ -1,4 +1,5 @@
 import { weddingData } from '../../data/weddingData';
+import { StarBackground } from '../ui/StarBackground';
 import './Footer.css';
 
 export function Footer() {
@@ -10,6 +11,7 @@ export function Footer() {
       }}
     >
       <div className="site-footer__overlay" aria-hidden="true" />
+      <StarBackground variant="local" count={40} seed={4242} />
       <div className="site-footer__content">
         <div className="site-footer__ornament" aria-hidden="true" />
         <p className="site-footer__names">{weddingData.couple.displayNameAr}</p>

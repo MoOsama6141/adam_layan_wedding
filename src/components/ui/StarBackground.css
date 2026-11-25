@@ -1,0 +1,40 @@
+.star-bg {
+  overflow: hidden;
+  pointer-events: none;
+  contain: paint;
+}
+
+.star-bg--fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.star-bg--local {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.star-bg__field {
+  position: absolute;
+  inset: -3rem;
+}
+
+.star-bg__star {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+
+.star-bg__star--ivory {
+  background: #f7f3eb;
+  box-shadow: 0 0 3px rgba(247, 243, 235, 0.45);
+}
+
+.star-bg__star--gold {
+  background: #c5a059;
+  box-shadow: 0 0 4px rgba(197, 160, 89, 0.5);
+}
+
